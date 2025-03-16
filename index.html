@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка свежих овощей, фруктов и сухофруктов</title>
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">Название вашего магазина</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/catalog">Каталог</a></li>
+                    <li><a href="/delivery">Доставка</a></li>
+                    <li><a href="/payment">Оплата</a></li>
+                    <li><a href="/about">О компании</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
+                    <li><a href="/cart">Корзина (0)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="hero">
+                <h1>Свежие и качественные продукты с доставкой на дом</h1>
+                <p>Закажите овощи, фрукты и сухофрукты прямо сейчас!</p>
+                <a href="/catalog" class="button">Перейти в каталог</a>
+            </section>
+
+            <section id="catalog">
+                <h2>Каталог товаров</h2>
+                <div class="categories">
+                    <h3>Категории</h3>
+                    <ul>
+                        <li><a href="/catalog/vegetables">Овощи</a></li>
+                        <li><a href="/catalog/fruits">Фрукты</a></li>
+                        <li><a href="/catalog/dried-fruits">Сухофрукты</a></li>
+                        <li><a href="/catalog/seasonal">Сезонные продукты</a></li>
+                        </ul>
+                </div>
+                <div class="filter">
+                    <h3>Фильтры</h3>
+                    <form>
+                        <label for="price">Цена:</label>
+                        <input type="range" id="price" name="price">
+                        <label for="weight">Вес:</label>
+                        <select id="weight" name="weight">
+                            <option value="">Любой</option>
+                            <option value="1kg">1 кг</option>
+                            <option value="2kg">2 кг</option>
+                            </select>
+                        <button type="submit">Применить</button>
+                    </form>
+                </div>
+                <div class="product-list">
+                    <article class="product-item">
+                        <img src="placeholder.jpg" alt="Название товара">
+                        <h3>Название товара</h3>
+                        <p class="price">Цена: ...</p>
+                        <a href="/product/1" class="button">Подробнее</a>
+                    </article>
+                    </div>
+            </section>
+
+            <section id="search">
+                <h2>Поиск</h2>
+                <form>
+                    <input type="text" placeholder="Поиск товаров...">
+                    <button type="submit">Найти</button>
+                </form>
+            </section>
+
+            <section id="cart">
+                <h2>Корзина</h2>
+                <p>Ваша корзина пуста.</p>
+                <a href="/checkout" class="button">Оформить заказ</a>
+            </section>
+
+            <section id="checkout">
+                <h2>Оформление заказа</h2>
+                <form>
+                    <h3>Контактная информация</h3>
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="tel" placeholder="Номер телефона">
+                    <input type="email" placeholder="Email">
+
+                    <h3>Адрес доставки</h3>
+                    <input type="text" placeholder="Адрес">
+                    <input type="text" placeholder="Комментарии к заказу">
+
+                    <h3>Способ оплаты</h3>
+                    <label><input type="radio" name="payment" value="cash"> Наличными при получении</label><br>
+                    <label><input type="radio" name="payment" value="transfer"> Перевод по номеру телефона</label><br>
+
+                    <h3>Способ доставки</h3>
+                    <label><input type="radio" name="delivery" value="courier"> Курьерская доставка</label><br>
+                    <label><input type="radio" name="delivery" value="pickup"> Самовывоз</label><br>
+
+                    <button type="submit">Подтвердить заказ</button>
+                </form>
+            </section>
+
+            <section id="about">
+                <h2>О компании</h2>
+                <p>Здесь будет информация о вашей компании, ее миссии и ценностях.</p>
+                <p>Мы предлагаем свежие и качественные овощи, фрукты и сухофрукты с доставкой на дом.</p>
+                </section>
+
+            <section id="delivery-info">
+                <h2>Доставка</h2>
+                <p>Информация об условиях доставки, зонах доставки и стоимости.</p>
+                </section>
+
+            <section id="payment-info">
+                <h2>Оплата</h2>
+                <p>Информация о способах оплаты: наличными при получении и переводом по номеру телефона.</p>
+                </section>
+
+            <section id="contacts">
+                <h2>Контакты</h2>
+                <p>Вы можете связаться с нами по телефону: <a href="tel:+7XXXXXXXXXX">+7XXXXXXXXXX</a></p>
+                <p>Или по электронной почте: <a href="mailto:info@example.com">info@example.com</a></p>
+                <form>
+                    <h3>Напишите нам</h3>
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="email" placeholder="Ваш email">
+                    <textarea placeholder="Сообщение"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Название вашего магазина. Все права защищены.</p>
+            <nav>
+                <ul>
+                    <li><a href="/privacy">Политика конфиденциальности</a></li>
+                    <li><a href="/terms">Условия использования</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    </body>
+</html>
