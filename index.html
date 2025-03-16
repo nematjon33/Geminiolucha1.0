@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Доставка свежих овощей, фруктов и сухофруктов на дом. Закажите качественные продукты прямо сейчас!">
     <title>Доставка свежих овощей, фруктов и сухофруктов</title>
     <link rel="stylesheet" href="/style.css">
-    </head>
+</head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="/">Название вашего магазина</a>
             </div>
-            <nav>
+            <nav aria-label="Основное меню">
                 <ul>
                     <li><a href="/">Главная</a></li>
                     <li><a href="/catalog">Каталог</a></li>
@@ -20,7 +21,7 @@
                     <li><a href="/payment">Оплата</a></li>
                     <li><a href="/about">О компании</a></li>
                     <li><a href="/contacts">Контакты</a></li>
-                    <li><a href="/cart">Корзина (0)</a></li>
+                    <li><a href="/cart">Корзина (<span id="cart-count">0</span>)</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,14 +29,14 @@
 
     <main>
         <div class="container">
-            <section id="hero">
-                <h1>Свежие и качественные продукты с доставкой на дом</h1>
+            <section id="hero" aria-labelledby="hero-heading">
+                <h1 id="hero-heading">Свежие и качественные продукты с доставкой на дом</h1>
                 <p>Закажите овощи, фрукты и сухофрукты прямо сейчас!</p>
                 <a href="/catalog" class="button">Перейти в каталог</a>
             </section>
 
-            <section id="catalog">
-                <h2>Каталог товаров</h2>
+            <section id="catalog" aria-labelledby="catalog-heading">
+                <h2 id="catalog-heading">Каталог товаров</h2>
                 <div class="categories">
                     <h3>Категории</h3>
                     <ul>
@@ -43,7 +44,7 @@
                         <li><a href="/catalog/fruits">Фрукты</a></li>
                         <li><a href="/catalog/dried-fruits">Сухофрукты</a></li>
                         <li><a href="/catalog/seasonal">Сезонные продукты</a></li>
-                        </ul>
+                    </ul>
                 </div>
                 <div class="filter">
                     <h3>Фильтры</h3>
@@ -55,14 +56,14 @@
                             <option value="">Любой</option>
                             <option value="1kg">1 кг</option>
                             <option value="2kg">2 кг</option>
-                            </select>
+                        </select>
                         <button type="submit">Применить</button>
                     </form>
                 </div>
                 <div class="product-list">
                     <article class="product-item">
                         <a href="/product/apple">
-                            <img src="/images/apple.jpg" alt="Яблоки">
+                            <img src="/images/apple.jpg" alt="Яблоки" loading="lazy">
                             <h3>Яблоки</h3>
                             <p class="price">Цена: 150 ₽/кг</p>
                         </a>
@@ -70,7 +71,7 @@
                     </article>
                     <article class="product-item">
                         <a href="/product/banana">
-                            <img src="/images/banana.jpg" alt="Бананы">
+                            <img src="/images/banana.jpg" alt="Бананы" loading="lazy">
                             <h3>Бананы</h3>
                             <p class="price">Цена: 80 ₽/кг</p>
                         </a>
@@ -78,20 +79,20 @@
                     </article>
                     <article class="product-item">
                         <a href="/product/raisins">
-                            <img src="/images/raisins.jpg" alt="Изюм">
+                            <img src="/images/raisins.jpg" alt="Изюм" loading="lazy">
                             <h3>Изюм</h3>
                             <p class="price">Цена: 300 ₽/кг</p>
                         </a>
                         <button class="add-to-cart" data-product-id="raisins">В корзину</button>
                     </article>
-                    </div>
+                </div>
             </section>
 
-            <section id="product-detail">
-                <h2>Яблоки</h2>
+            <section id="product-detail" aria-labelledby="product-detail-heading">
+                <h2 id="product-detail-heading">Яблоки</h2>
                 <div class="product-info">
                     <div class="product-image">
-                        <img src="/images/apple-large.jpg" alt="Подробное изображение яблок">
+                        <img src="/images/apple-large.jpg" alt="Подробное изображение яблок" loading="lazy">
                     </div>
                     <div class="product-details">
                         <p class="price">Цена: 150 ₽/кг</p>
@@ -106,16 +107,16 @@
                 </div>
             </section>
 
-            <section id="search">
-                <h2>Поиск</h2>
+            <section id="search" aria-labelledby="search-heading">
+                <h2 id="search-heading">Поиск</h2>
                 <form>
                     <input type="text" placeholder="Поиск товаров...">
                     <button type="submit">Найти</button>
                 </form>
             </section>
 
-            <section id="cart">
-                <h2>Корзина</h2>
+            <section id="cart" aria-labelledby="cart-heading">
+                <h2 id="cart-heading">Корзина</h2>
                 <div class="cart-items">
                     <table>
                         <thead>
@@ -135,7 +136,7 @@
                                 <td class="item-total">150 ₽</td>
                                 <td><button class="remove-from-cart">Удалить</button></td>
                             </tr>
-                            </tbody>
+                        </tbody>
                         <tfoot>
                             <tr>
                                 <td colspan="3">Итоговая стоимость:</td>
@@ -151,55 +152,55 @@
                 </div>
             </section>
 
-            <section id="checkout">
-                <h2>Оформление заказа</h2>
+            <section id="checkout" aria-labelledby="checkout-heading">
+                <h2 id="checkout-heading">Оформление заказа</h2>
                 <form>
                     <h3>Контактная информация</h3>
-                    <input type="text" placeholder="Ваше имя">
-                    <input type="tel" placeholder="Номер телефона">
-                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Номер телефона" required>
+                    <input type="email" placeholder="Email" required>
 
                     <h3>Адрес доставки</h3>
-                    <input type="text" placeholder="Адрес">
+                    <input type="text" placeholder="Адрес" required>
                     <input type="text" placeholder="Комментарии к заказу">
 
                     <h3>Способ оплаты</h3>
-                    <label><input type="radio" name="payment" value="cash"> Наличными при получении</label><br>
-                    <label><input type="radio" name="payment" value="transfer"> Перевод по номеру телефона</label><br>
+                    <label><input type="radio" name="payment" value="cash" required> Наличными при получении</label><br>
+                    <label><input type="radio" name="payment" value="transfer" required> Перевод по номеру телефона</label><br>
 
                     <h3>Способ доставки</h3>
-                    <label><input type="radio" name="delivery" value="courier"> Курьерская доставка</label><br>
-                    <label><input type="radio" name="delivery" value="pickup"> Самовывоз</label><br>
+                    <label><input type="radio" name="delivery" value="courier" required> Курьерская доставка</label><br>
+                    <label><input type="radio" name="delivery" value="pickup" required> Самовывоз</label><br>
 
                     <button type="submit">Подтвердить заказ</button>
                 </form>
             </section>
 
-            <section id="about">
-                <h2>О компании</h2>
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">О компании</h2>
                 <p>Здесь будет информация о вашей компании, ее миссии и ценностях.</p>
                 <p>Мы предлагаем свежие и качественные овощи, фрукты и сухофрукты с доставкой на дом.</p>
-                </section>
+            </section>
 
-            <section id="delivery-info">
-                <h2>Доставка</h2>
+            <section id="delivery-info" aria-labelledby="delivery-info-heading">
+                <h2 id="delivery-info-heading">Доставка</h2>
                 <p>Информация об условиях доставки, зонах доставки и стоимости.</p>
-                </section>
+            </section>
 
-            <section id="payment-info">
-                <h2>Оплата</h2>
+            <section id="payment-info" aria-labelledby="payment-info-heading">
+                <h2 id="payment-info-heading">Оплата</h2>
                 <p>Информация о способах оплаты: наличными при получении и переводом по номеру телефона.</p>
-                </section>
+            </section>
 
-            <section id="contacts">
-                <h2>Контакты</h2>
+            <section id="contacts" aria-labelledby="contacts-heading">
+                <h2 id="contacts-heading">Контакты</h2>
                 <p>Вы можете связаться с нами по телефону: <a href="tel:+7XXXXXXXXXX">+7XXXXXXXXXX</a></p>
                 <p>Или по электронной почте: <a href="mailto:info@example.com">info@example.com</a></p>
                 <form>
                     <h3>Напишите нам</h3>
-                    <input type="text" placeholder="Ваше имя">
-                    <input type="email" placeholder="Ваш email">
-                    <textarea placeholder="Сообщение"></textarea>
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Сообщение" required></textarea>
                     <button type="submit">Отправить</button>
                 </form>
             </section>
@@ -209,7 +210,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Название вашего магазина. Все права защищены.</p>
-            <nav>
+            <nav aria-label="Дополнительное меню">
                 <ul>
                     <li><a href="/privacy">Политика конфиденциальности</a></li>
                     <li><a href="/terms">Условия использования</a></li>
@@ -217,7 +218,5 @@
             </nav>
         </div>
     </footer>
-
-    </body>
-</html>
-   
+</body>
+                    </html>
