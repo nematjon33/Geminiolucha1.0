@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Доставка свежих овощей, фруктов и сухофруктов на дом. Закажите качественные продукты прямо сейчас!">
+    <title>Доставка свежих овощей, фруктов и сухофруктов</title>
+    <link rel="stylesheet" href="style.css"> <!-- Убедитесь, что файл style.css в той же папке -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">Название вашего магазина</a>
+            </div>
+            <nav aria-label="Основное меню">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/catalog">Каталог</a></li>
+                    <li><a href="/delivery">Доставка</a></li>
+                    <li><a href="/payment">Оплата</a></li>
+                    <li><a href="/about">О компании</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
+                    <li><a href="/cart">Корзина (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="hero">
+                <h1>Свежие и качественные продукты с доставкой на дом</h1>
+                <p>Закажите овощи, фрукты и сухофрукты прямо сейчас!</p>
+                <a href="/catalog" class="button">Перейти в каталог</a>
+            </section>
+
+            <section id="catalog">
+                <h2>Каталог товаров</h2>
+                <div class="categories">
+                    <h3>Категории</h3>
+                    <ul>
+                        <li><a href="/catalog/vegetables">Овощи</a></li>
+                        <li><a href="/catalog/fruits">Фрукты</a></li>
+                        <li><a href="/catalog/dried-fruits">Сухофрукты</a></li>
+                        <li><a href="/catalog/seasonal">Сезонные продукты</a></li>
+                    </ul>
+                </div>
+                <div class="filter">
+                    <h3>Фильтры</h3>
+                    <form>
+                        <label for="price">Цена:</label>
+                        <input type="range" id="price" name="price">
+                        <label for="weight">Вес:</label>
+                        <select id="weight" name="weight">
+                            <option value="">Любой</option>
+                            <option value="1kg">1 кг</option>
+                            <option value="2kg">2 кг</option>
+                        </select>
+                        <button type="submit">Применить</button>
+                    </form>
+                </div>
+                <div class="product-list">
+                    <article class="product-item">
+                        <a href="/product/apple">
+                            <img src="images/apple.jpg" alt="Яблоки" loading="lazy">
+                            <h3>Яблоки</h3>
+                            <p class="price">Цена: 150 ₽/кг</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="apple">В корзину</button>
+                    </article>
+                    <article class="product-item">
+                        <a href="/product/banana">
+                            <img src="images/banana.jpg" alt="Бананы" loading="lazy">
+                            <h3>Бананы</h3>
+                            <p class="price">Цена: 80 ₽/кг</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="banana">В корзину</button>
+                    </article>
+                    <article class="product-item">
+                        <a href="/product/raisins">
+                            <img src="images/raisins.jpg" alt="Изюм" loading="lazy">
+                            <h3>Изюм</h3>
+                            <p class="price">Цена: 300 ₽/кг</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="raisins">В корзину</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Название вашего магазина. Все права защищены.</p>
+            <nav aria-label="Дополнительное меню">
+                <ul>
+                    <li><a href="/privacy">Политика конфиденциальности</a></li>
+                    <li><a href="/terms">Условия использования</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
