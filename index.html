@@ -60,12 +60,49 @@
                 </div>
                 <div class="product-list">
                     <article class="product-item">
-                        <img src="placeholder.jpg" alt="Название товара">
-                        <h3>Название товара</h3>
-                        <p class="price">Цена: ...</p>
-                        <a href="/product/1" class="button">Подробнее</a>
+                        <a href="/product/apple">
+                            <img src="/images/apple.jpg" alt="Яблоки">
+                            <h3>Яблоки</h3>
+                            <p class="price">Цена: 150 ₽/кг</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="apple">В корзину</button>
+                    </article>
+                    <article class="product-item">
+                        <a href="/product/banana">
+                            <img src="/images/banana.jpg" alt="Бананы">
+                            <h3>Бананы</h3>
+                            <p class="price">Цена: 80 ₽/кг</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="banana">В корзину</button>
+                    </article>
+                    <article class="product-item">
+                        <a href="/product/raisins">
+                            <img src="/images/raisins.jpg" alt="Изюм">
+                            <h3>Изюм</h3>
+                            <p class="price">Цена: 300 ₽/кг</p>
+                        </a>
+                        <button class="add-to-cart" data-product-id="raisins">В корзину</button>
                     </article>
                     </div>
+            </section>
+
+            <section id="product-detail">
+                <h2>Яблоки</h2>
+                <div class="product-info">
+                    <div class="product-image">
+                        <img src="/images/apple-large.jpg" alt="Подробное изображение яблок">
+                    </div>
+                    <div class="product-details">
+                        <p class="price">Цена: 150 ₽/кг</p>
+                        <p>Состав: Свежие яблоки высшего сорта.</p>
+                        <p>Срок годности: 7 дней.</p>
+                        <p>Вес: Указывается при заказе.</p>
+                        <p>Пищевая ценность: ...</p>
+                        <label for="quantity">Количество (кг):</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1">
+                        <button class="add-to-cart" data-product-id="apple">Добавить в корзину</button>
+                    </div>
+                </div>
             </section>
 
             <section id="search">
@@ -78,8 +115,39 @@
 
             <section id="cart">
                 <h2>Корзина</h2>
-                <p>Ваша корзина пуста.</p>
-                <a href="/checkout" class="button">Оформить заказ</a>
+                <div class="cart-items">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Товар</th>
+                                <th>Количество</th>
+                                <th>Цена за кг</th>
+                                <th>Итого</th>
+                                <th>Действие</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cart-item" data-product-id="apple">
+                                <td>Яблоки</td>
+                                <td><input type="number" value="1" min="1"></td>
+                                <td class="price-per-unit">150 ₽</td>
+                                <td class="item-total">150 ₽</td>
+                                <td><button class="remove-from-cart">Удалить</button></td>
+                            </tr>
+                            </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Итоговая стоимость:</td>
+                                <td class="cart-total">150 ₽</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="cart-actions">
+                    <a href="/checkout" class="button">Оформить заказ</a>
+                    <button class="clear-cart">Очистить корзину</button>
+                </div>
             </section>
 
             <section id="checkout">
